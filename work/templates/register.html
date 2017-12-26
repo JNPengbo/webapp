@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<div id="register-container">
+    <form id="form-container" method="post" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        {{ obj.as_p }}
+        <input type="submit"/>
+    </form>
+</div>
+
+<a href="http://127.0.0.1:8000/login/">登陆</a>
+<a href="http://127.0.0.1:8000/index/">主页</a>
+</body>
+</html>

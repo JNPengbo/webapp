@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style type="text/css">
+        .s11{
+            width: 1000px;
+            height: 40px;
+            display: block;
+            font-size: 16px;
+            line-height: 40px;
+            background: white;
+            border: navajowhite solid 1px;
+            color: azure;
+        }
+        .s22{
+            padding: 10px;
+        }
+        input{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<span>欢迎<a id='1'href="person">{{ username }}</a></span>
+<br/>
+<a id='2' href="http://127.0.0.1:8000/register/">注册</a>
+<a id="3" href="http://127.0.0.1:8000/login/">登陆</a>
+<a id='4' href="http://127.0.0.1:8000/index/">主页</a>
+<a href="http://127.0.0.1:8000/logout/">退出登陆</a>
+<script type="text/javascript">
+   var a = document.getElementById('1').innerHTML;
+   if (a) {
+       document.getElementById('2').remove();
+       document.getElementById('3').remove();
+   }
+</script>
+</body>
+</html>
